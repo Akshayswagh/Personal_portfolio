@@ -1015,6 +1015,173 @@
           width: 100%;
         }
       }
+
+      /* Hire Me Section */
+      .hire-me {
+        padding: 80px 10%;
+        background-color: #f8f9fa;
+      }
+
+      .hire-container {
+        display: flex;
+        gap: 40px;
+        margin-top: 50px;
+        flex-wrap: wrap;
+      }
+
+      .hire-content {
+        flex: 1;
+        min-width: 300px;
+      }
+
+      .hire-content h3 {
+        font-size: 28px;
+        margin-bottom: 20px;
+        color: var(--dark);
+      }
+
+      .hire-content p {
+        font-size: 16px;
+        line-height: 1.6;
+        color: var(--gray);
+        margin-bottom: 30px;
+      }
+
+      .hire-features {
+        margin-bottom: 40px;
+      }
+
+      .feature-box {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 15px;
+      }
+
+      .feature-box i {
+        color: var(--primary);
+        font-size: 20px;
+      }
+
+      .feature-box span {
+        font-size: 16px;
+        color: var(--dark);
+      }
+
+      .process h4 {
+        font-size: 22px;
+        margin-bottom: 20px;
+        color: var(--dark);
+      }
+
+      .process-steps {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+      }
+
+      .step {
+        display: flex;
+        gap: 15px;
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      }
+
+      .step-number {
+        width: 30px;
+        height: 30px;
+        background: var(--primary);
+        color: #fff;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        flex-shrink: 0;
+      }
+
+      .step-content h5 {
+        font-size: 18px;
+        margin-bottom: 5px;
+        color: var(--dark);
+      }
+
+      .step-content p {
+        font-size: 14px;
+        color: var(--gray);
+        margin: 0;
+      }
+
+      .hire-form {
+        flex: 1;
+        min-width: 300px;
+        background: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .hire-form h3 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: var(--dark);
+        text-align: center;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .form-group input,
+      .form-group textarea {
+        width: 100%;
+        padding: 12px 15px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        font-size: 16px;
+        transition: all 0.3s ease;
+      }
+
+      .form-group input:focus,
+      .form-group textarea:focus {
+        border-color: var(--primary);
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.2);
+      }
+
+      .form-group textarea {
+        height: 120px;
+        resize: vertical;
+      }
+
+      .hire-btn {
+        width: 100%;
+        padding: 15px;
+        background: var(--primary);
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .hire-btn:hover {
+        background: var(--secondary);
+      }
+
+      @media (max-width: 768px) {
+        .hire-me {
+          padding: 50px 5%;
+        }
+
+        .process-steps {
+          grid-template-columns: 1fr;
+        }
+      }
     </style>
   </head>
   <body>
@@ -1220,7 +1387,9 @@
               E-commerce application with add to cart functionality and admin
               panel for product management.
             </p>
-            <a href="https://hadolefirecrackers-otwd.onrender.com/" target="_blank"
+            <a
+              href="https://hadolefirecrackers-otwd.onrender.com/"
+              target="_blank"
               ><i class="fas fa-external-link-alt"></i
             ></a>
           </div>
@@ -1378,6 +1547,121 @@
       </div>
     </section>
 
+    <!-- Add this section right before the Contact section in your HTML -->
+    <section class="hire-me" id="hire">
+      <h2 class="heading">Hire <span>Me</span></h2>
+
+      <div class="hire-container">
+        <div class="hire-content">
+          <h3>Let's Work Together!</h3>
+          <p>
+            I'm available for freelance projects and would love to help bring
+            your ideas to life. Whether you need a complete website, a web
+            application, or just some development help, I'm here to deliver
+            high-quality solutions tailored to your needs.
+          </p>
+
+          <div class="hire-features">
+            <div class="feature-box">
+              <i class="fas fa-check-circle"></i>
+              <span>Full project development from concept to deployment</span>
+            </div>
+            <div class="feature-box">
+              <i class="fas fa-check-circle"></i>
+              <span>Responsive designs that work on all devices</span>
+            </div>
+            <div class="feature-box">
+              <i class="fas fa-check-circle"></i>
+              <span>Clean, maintainable code with documentation</span>
+            </div>
+            <div class="feature-box">
+              <i class="fas fa-check-circle"></i>
+              <span>Regular communication and updates</span>
+            </div>
+            <div class="feature-box">
+              <i class="fas fa-check-circle"></i>
+              <span>Ongoing support after project completion</span>
+            </div>
+          </div>
+
+          <div class="process">
+            <h4>My Working Process:</h4>
+            <div class="process-steps">
+              <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                  <h5>Consultation</h5>
+                  <p>We discuss your project requirements and goals</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                  <h5>Planning</h5>
+                  <p>I create a detailed project plan and timeline</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                  <h5>Development</h5>
+                  <p>I build your project with regular updates</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                  <h5>Delivery</h5>
+                  <p>Final review and project handover</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hire-form">
+          <h3>Get a Free Quote</h3>
+          <form id="hire-form">
+            <div class="form-group">
+              <input type="text" name="name" placeholder="Your Name" required />
+            </div>
+            <div class="form-group">
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                required
+              />
+            </div>
+            
+            <div class="form-group">
+              <input
+                type="text"
+                name="subject"
+                placeholder="Project Type"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <textarea
+                name="message"
+                placeholder="Project Details"
+                required
+              ></textarea>
+            </div>
+            <div class="form-group">
+              <input
+                type="number"
+                name="budget"
+                placeholder="Estimated Budget (Optional)"
+              />
+            </div>
+            <button type="submit" class="hire-btn">Send Request</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
     <!-- Contact Section -->
     <section class="contact" id="contact">
       <h2 class="heading">Contact <span>Me</span></h2>
@@ -1498,7 +1782,6 @@
 
       // Mobile Menu Toggle
       const menuIcon = document.getElementById("menu-icon");
-      const navbar = document.querySelector(".navbar");
 
       menuIcon.addEventListener("click", () => {
         menuIcon.classList.toggle("fa-times");
@@ -1682,6 +1965,57 @@
 
       // Start the animation after 1 second
       setTimeout(typeWriter, 1000);
+
+      // Add this to your existing JavaScript
+      document
+        .getElementById("hire-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const submitBtn = this.querySelector('button[type="submit"]');
+          const originalText = submitBtn.textContent;
+
+          // Show loading state
+          submitBtn.textContent = "Sending...";
+          submitBtn.disabled = true;
+
+          // Create a message element
+          const messageDiv = document.createElement("div");
+          messageDiv.style.marginTop = "15px";
+          messageDiv.style.textAlign = "center";
+          this.appendChild(messageDiv);
+
+          // Use EmailJS to send the form
+          emailjs
+            .sendForm("service_jhwhlhp", "template_c727e3g", this)
+            .then(() => {
+              messageDiv.textContent = "Request sent successfully!";
+              messageDiv.style.color = "var(--success)";
+              this.reset();
+            })
+            .catch((error) => {
+              messageDiv.textContent =
+                "Failed to send request. Please try again.";
+              messageDiv.style.color = "red";
+              console.error("Error:", error);
+            })
+            .finally(() => {
+              submitBtn.textContent = originalText;
+              submitBtn.disabled = false;
+
+              // Remove message after 5 seconds
+              setTimeout(() => {
+                messageDiv.remove();
+              }, 5000);
+            });
+        });
+
+      // Also add "Hire Me" to your navigation
+      const navbar = document.querySelector(".navbar");
+      const hireNavItem = document.createElement("a");
+      hireNavItem.href = "#hire";
+      hireNavItem.textContent = "Hire Me";
+      navbar.appendChild(hireNavItem);
     </script>
   </body>
 </html>
