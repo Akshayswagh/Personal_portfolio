@@ -1633,7 +1633,15 @@
                 required
               />
             </div>
-            
+            <div class="form-group">
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Mobile Number"
+                required
+              />
+            </div>
+
             <div class="form-group">
               <input
                 type="text"
@@ -1653,7 +1661,8 @@
               <input
                 type="number"
                 name="budget"
-                placeholder="Estimated Budget (Optional)"
+                placeholder="Estimated Budget "
+                required
               />
             </div>
             <button type="submit" class="hire-btn">Send Request</button>
@@ -1683,9 +1692,13 @@
         </div>
         <div class="input-box">
           <input
-            type="number"
+            type="tel"
             name="phone"
-            placeholder="Mobile Number"
+            id="phone-input"
+            placeholder="Mobile Number (10 digits)"
+            maxlength="10"
+            pattern="[0-9]{10}"
+            title="Please enter a 10-digit mobile number"
             required
           />
           <input type="text" name="subject" placeholder="Subject" required />
@@ -1866,6 +1879,8 @@
 
           const submitBtn = document.getElementById("submit-btn");
           const originalText = submitBtn.value;
+          const phoneInput = document.querySelector('input[name="phone"]');
+          const phoneValue = phoneInput.value.trim();
 
           // Replace alerts with on-page messages
           const messageDiv = document.createElement("div");
@@ -1880,6 +1895,13 @@
           if (!this.from_email.value.includes("@")) {
             alert("Please enter a valid email address");
             return;
+          }
+          // Phone number Validation
+          if (!/^[0-9]{10}$/.test(phoneValue)) {
+            alert("Please enter a valid 10-digit mobile number");
+            phoneInput.focus();
+            e.preventDefault();
+            return false;
           }
 
           emailjs
