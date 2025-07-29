@@ -1899,13 +1899,7 @@
             alert("Please enter a valid email address");
             return;
           }
-          // Phone number Validation
-          if (!/^[0-9]{10}$/.test(phoneValue)) {
-            alert("Please enter a valid 10-digit mobile number");
-            phoneInput.focus();
-            e.preventDefault();
-            return false;
-          }
+        
 
           emailjs
             .sendForm("service_jhwhlhp", "template_7it0pr8", this)
